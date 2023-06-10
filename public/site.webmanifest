@@ -1,0 +1,19 @@
+{
+    "name": "StatsPage",
+    "short_name": "StatsPage",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#76b4e2",
+    "background_color": "#76b4e2",
+    "display": "standalone"
+}

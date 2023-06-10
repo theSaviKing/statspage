@@ -1,13 +1,14 @@
 ---
 export interface Props {
-    title: string;
+    title?: string;
 }
-const {title} = Astro.props
+const {title = ""} = Astro.props
 ---
 
 <head>
-    <title>{title}</title>
+    <title>{title ? title + " | StatsPage" : "StatsPage"}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="">
-    
+<body class="p-4 container flex justify-center items-center w-full min-h-screen mx-auto">
+    <slot />
 </body>

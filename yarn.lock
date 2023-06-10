@@ -455,6 +455,21 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz#8cfaf2ff603e9aabb910e9c0558c26cf32744061"
   integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
 
+"@fontsource/dm-mono@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-5.0.3.tgz#0b5681fdf9ca16c39d0684a652b16783cb8d6a06"
+  integrity sha512-9CHaVMFmn4Wt+FXy649RySQlM0kGzeqyz8j/fiJOO1TMyMb1ouWMJHqKB9wm+Yse8kMV3Fp8+d9V+PJK7rHneg==
+
+"@fontsource/dm-sans@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-5.0.3.tgz#87f7569a6a0cbeb5f19ddead59973c0a81e0c8e0"
+  integrity sha512-M+Gdza6nQM4OjoEpUXrmbvSoilSUCzOXN6BXpkT8E7kJiyoLuYWs2HvsdmgHDP8mnz2FULWg2iVbYUZX4snxkw==
+
+"@fontsource/dm-serif-display@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-serif-display/-/dm-serif-display-5.0.3.tgz#a4df2de096d4c0122086e8cf7581d0811024d030"
+  integrity sha512-/5pdpdiFWXwkrcCOqNrP2yxQ8NKhLUurbqE4gywrAXYCqq/sSikNTFDZ51FHKZrFyyrKCYDlLctRnBHJiZPXww==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
