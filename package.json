@@ -16,5 +16,8 @@
     "tailwindcss": "^3.0.24"
   },
   "author": "T. Paul Kariuki <tpaulkariuki@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "daisyui": "^3.0.22"
+  }
 }
