@@ -1,9 +1,27 @@
 ---
 import Base from "../layouts/Base.astro";
+import Heading from "../components/Heading.astro";
 ---
 <Base title="Home">
-    <main class="flex flex-col justify-center items-center gap-4">
-        <h1 class="font-black text-secondary text-5xl">StatsPage</h1>
-        <p class="tracking-widest">track your play...elevate your game.</p>
+    <main class="flex flex-col justify-center items-center gap-6">
+        <Heading />
+        <div class="text-4xl font-bold">
+            <p>Track your game.</p>
+            <p class="text-primary">Elevate your play.</p>
+        </div>
+        <div class="gap gap-4 md:flex">
+            <a href="dashboard" class="btn btn-primary">start tracking</a>
+            <button class="btn" onclick="confirm_admin.showModal()">admin</button>
+        </div>
     </main>
+    <dialog id="confirm_admin" class="modal" data-theme="umary">
+        <form method="dialog" class="modal-box flex flex-col gap-2">
+            <p class="font-black font-display text-error text-xl">WARNING!</p>
+            <p>You are attempting to access the admin site. If you do not have credentials for the site, you will not be able to get in.</p>
+            <div class="modal-action w-full grid grid-cols-2">
+                <button class="btn btn-primary btn-block">nevermind</button>
+                <button class="btn btn-blc">i understand</button>
+            </div>
+        </form>
+    </dialog>
 </Base>

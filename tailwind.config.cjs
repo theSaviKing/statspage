@@ -5,7 +5,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'DM Sans'", ...defaultTheme.fontFamily.sans],
+                display: ["Syne", ...defaultTheme.fontFamily.sans],
+                sans: ["Inter", ...defaultTheme.fontFamily.sans],
                 serif: ["'DM Serif Display'", ...defaultTheme.fontFamily.serif],
                 mono: ["'DM Mono'", ...defaultTheme.fontFamily.mono]
             }
@@ -15,9 +16,9 @@ module.exports = {
     daisyui: {
         themes: [
             {
-                mytheme: {
-                    primary: "#00355D",
-                    secondary: "#377CFB",
+                umary: {
+                    secondary: "#00355D",
+                    primary: "#377CFB",
                     accent: "#FF671D",
                     neutral: "#b3bbcc",
                     "base-100": "#0D0D0D",
