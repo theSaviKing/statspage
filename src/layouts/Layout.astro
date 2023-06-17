@@ -1,0 +1,19 @@
+---
+export interface Props {
+    title?: string;
+}
+const {title = ""} = Astro.props
+import '@fontsource/dm-mono'
+import '@fontsource/dm-sans'
+import '@fontsource/dm-serif-display'
+import '@fontsource/inter'
+import '@fontsource-variable/syne'
+---
+
+<head>
+    <title>{title ? title + " | StatsPage" : "StatsPage: Stat Tracker for Ultimate Frisbee"}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="px-4 py-6 container flex flex-col justify-center items-center w-full min-h-screen mx-auto">
+    <slot />
+</body>

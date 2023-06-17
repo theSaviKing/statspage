@@ -1,8 +1,37 @@
 ---
-const url = import.meta.env.API_URL
-import Base from "../../layouts/Base.astro"
+export const prerender = true;
+
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading.astro";
+
+var url = await import.meta.env.API_URL;
+const player_data = await fetch(`${url}/players/?format=json`).then(
+    (response) => response.json()
+);
 ---
 
-<Base>
-    
+<Layout>
+    <Heading header="statistics" page="All Players" />
+    <div class="overflow-x-auto">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {player_data.map(
+                    item => (
+                        <tr>
+                            <th>{item.id}</th>
+                            <th>{item.first_name}</th>
+                            <th>{item.last_name}</th>
+                        </tr>
+                    )
+                )}
+            </tbody>
+        </table>
+    </div>
 </Base>

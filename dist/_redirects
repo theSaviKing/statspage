@@ -1,2 +1,3 @@
-/             /.netlify/functions/entry    200
-/dashboard    /.netlify/functions/entry    200
+/               /.netlify/functions/entry    200
+/dashboard      /dashboard/index.html        200
+/players/all    /players/all/index.html      200
