@@ -8,15 +8,16 @@ export interface Props {
 }
 const { title = "StatsPage", header = "", footer = "", large = false, page = "" } = Astro.props
 const otherClassList = "uppercase tracking-widest " + (large ? "text-xl" : "text-lg")
+const TitleElement = (page == "" ? "p" : "a")
 ---
 <div class="flex flex-col justify-center items-center gap-1 select-none">
     {header == "" ? <></> : <p class={otherClassList}>{header}</p>}
-    <a href="/" id="title" class:list={['font-black', 'font-display', 'text-primary', {"text-4xl md:text-5xl": large}, {"text-3xl md:text-4xl": !large}, 'relative']}>
+    <TitleElement href="/" id={page == "" ? "" : "title"} class:list={['font-black', 'font-display', 'text-primary', {"text-4xl md:text-5xl": large}, {"text-3xl md:text-4xl": !large}, 'relative']}>
         {title}
         <span></span>
-    </a>
+    </TitleElement>
     {footer == "" ? <></> : <p class={otherClassList}>{footer}</p>}
-    {page == "" ? <></> : <p class:list={['font-black', 'font-display', 'text-inherit', {'text-5xl md:text-6xl': large}, {'text-3xl md:text-4xl': !large}, 'mb-10', 'mt-2']}>{page}<span class="title-underline"></span></p>}
+    {page == "" ? <></> : <p class:list={['font-bold', 'font-display', 'text-inherit', {'text-5xl md:text-6xl': large}, {'text-3xl md:text-4xl': !large}, 'mb-10', 'mt-2']}>{page}<span class="title-underline"></span></p>}
 </div>
 <style>
     p:has(.title-underline) {
@@ -31,17 +32,11 @@ const otherClassList = "uppercase tracking-widest " + (large ? "text-xl" : "text
     p:hover .title-underline {
         @apply w-full h-full mx-0 px-2
     }
-    #title {
-        @apply transition-all duration-500
-    }
     #title span {
         @apply absolute inset-x-0 h-[1px] block bg-accent transition-all w-0;
         animation-timing-function: cubic-bezier(1,0,0,1)
     }
     #title:hover span {
         width: 100%;
-    }
-    #title:hover {
-        @apply font-bold
     }
 </style>

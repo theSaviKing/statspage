@@ -1,0 +1,8 @@
+---
+const games = await fetch(`${import.meta.env.API_URL}/games/recent_games/?format=json`).then(
+    (response) => response.json()
+);
+const teams = await fetch(`${import.meta.env.API_URL}/teams/?format=json`).then(
+    (response) => response.json()
+);
+---

@@ -1,19 +1,14 @@
 ---
-export const prerender = true;
-
 import Layout from "../layouts/Layout.astro";
 import Heading from "../components/Heading.astro";
-import Game from "../components/GameDisplayHome.astro";
-
-const games = await fetch(`${import.meta.env.API_URL}/games/?format=json`).then(response => response.json())
-const teams = await fetch(`${import.meta.env.API_URL}/teams/?format=json`).then(response => response.json())
+import RecentGames from "../components/dashboard/RecentGames.astro";
 ---
 
 <Layout title="Dashboard">
     <Heading page="Dashboard" />
-    <main class="grid grid-cols-3 gap-4 divide-x-0">
-        {games.map(
-            game => <Game game={game} home={teams.find(team => team.id === game.home_team)} away={teams.find(team => team.id === game.away_team)} />
-        )}
+    <main class="grid grid-cols-3 gap-4 divide-x">
+        <div>
+            <RecentGames limit=3 />
+        </div>
     </main>
 </Layout>
