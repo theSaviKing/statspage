@@ -1,8 +1,27 @@
 ---
-const games = await fetch(`${import.meta.env.API_URL}/games/recent_games/?format=json`).then(
+export interface Props {
+    limit?: number;
+}
+import Header from "./Header.astro"
+const { limit = 3 } = Astro.props;
+const games = await fetch(`${import.meta.env.API_URL}/games/recent_games/?limit=${limit}&format=json`).then(
     (response) => response.json()
 );
 const teams = await fetch(`${import.meta.env.API_URL}/teams/?format=json`).then(
     (response) => response.json()
 );
 ---
+<div class="flex flex-col gap-4 w-max">
+    <Header title="Recent Games" bgcolor="p" />
+    {games.map(
+        game => {
+            const home_team = teams.find(team => team.id === game.home_team)
+            const away_team = teams.find(team => team.id === game.away_team)
+            return (
+                <div class="stat">
+                    <p class="stat-value">{home_team.short_name} vs. {away_team.short_name}</p>
+                </div>
+            )
+        }
+    )}
+</div>

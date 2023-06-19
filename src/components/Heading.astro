@@ -27,10 +27,10 @@ const TitleElement = (page == "" ? "p" : "a")
         }
     }
     .title-underline {
-        @apply absolute bottom-0 inset-x-0 h-3 bg-secondary -z-10 mx-4
+        @apply absolute bottom-0 inset-x-0 h-3 bg-secondary -z-10 mx-4 transition-[height]
     }
     p:hover .title-underline {
-        @apply w-full h-full mx-0 px-2
+        @apply w-full h-full mx-0 px-2 transition-[height]
     }
     #title span {
         @apply absolute inset-x-0 h-[1px] block bg-accent transition-all w-0;

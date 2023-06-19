@@ -1,0 +1,10 @@
+---
+export interface Props {
+    title: string;
+    bgcolor?: string;
+}
+const { title, bgcolor = "p" } = Astro.props
+---
+<div class:list={['w-full', {'bg-primary': bgcolor == "p"}, {'bg-secondary': bgcolor == "s"}, {'bg-accent': bgcolor == "a"}, 'uppercase', 'font-black', {'text-primary-content': bgcolor == "p"}, {'text-secondary-content': bgcolor == "s"}, {'text-accent-content': bgcolor == "a"}, 'flex', 'justify-center', 'items-center', 'rounded-xl', 'p-6']}>
+    <p>{title}</p>
+</div>
