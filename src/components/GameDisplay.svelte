@@ -16,7 +16,9 @@
         <p class="font-[750] uppercase">{game.home_team.short_name}</p>
         <p>vs.</p>
         <p class="font-[750] uppercase">{game.away_team.short_name}</p>
-        <TeamLogo color=
+        <TeamLogo color={game.home_team.color} />
     </div>
 </div>
 {/if}
+
+<!-- Inspiration: https://www.mnufc.com/ -->
