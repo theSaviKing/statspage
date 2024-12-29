@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Heading from "../components/Heading.astro";
-import Header from "../components/dashboard/Header.astro"
+import Header from "../components/dashboard/Header.astro";
 import RecentGames from "../components/dashboard/RecentGames.svelte";
 ---
 
 <Layout title="Dashboard">
     <Heading page="Dashboard" />
-    <main class="grid grid-cols-3 gap-4 divide-x w-full">
+    <main class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 divide-x w-full">
         <div class="flex flex-col gap-4">
             <Header title="Recent Games" />
             <RecentGames client:load />

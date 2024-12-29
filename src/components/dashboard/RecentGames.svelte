@@ -1,5 +1,5 @@
 <script>
-    import GameDisplay from "../GameDisplay.svelte"
+    import GameDisplay from "../GameDisplay.svelte";
 
     export const limit = 3;
     const game_data_url = new URL(
@@ -18,15 +18,13 @@
         game data
     </div>
 {:then games}
-    <div class="flex flex-col gap-4">
+    <div class="grid gap-4">
         {#each games as game}
-            <GameDisplay game={game} mode="dashboard" />
+            <GameDisplay {game} mode="dashboard" />
         {/each}
     </div>
 {:catch}
-    <div
-        class="dash-message"
-    >
+    <div class="dash-message">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
